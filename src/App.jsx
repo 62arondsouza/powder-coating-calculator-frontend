@@ -66,7 +66,7 @@ function App() {
     if (!confirm('Delete ALL items? This cannot be undone.')) return;
 
     try {
-      await fetch('/api/items', { method: 'DELETE' });
+      await fetch(`${BASE_URL}/api/items`, { method: 'DELETE' });
       setItems([]); // Clear UI
       setTotalArea(0);
       setTotalPrice(0);
